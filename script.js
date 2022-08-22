@@ -4,13 +4,21 @@ const box = document.querySelectorAll('.box');
 // const errorImg = document.querySelectorAll('.errorImg');
 
 document.querySelector('.submit').addEventListener('click', function (e) {
+	e.preventDefault();
 	console.log('clicked');
 	inputFileds.forEach(input => {
 		if (input.value.trim() === '') {
-			input.style.border = '1px solid red';
+			input.style.border = '2px solid red';
+			input.nextSibling.remove();
+			// input.parentElement.removeChild('p');
 			input.insertAdjacentHTML(
-				'afterend',
-				`<p style='color:red;text-align:right;'>${input.name} cannot be empty</p>`
+				'afterend', //ADD THE IMG ELEMENT TOO
+				`<div><img
+            src="images/icon-error.svg"
+            class="errorImg"
+            alt=""
+         />
+            <p style='color:red;text-align:right; margin-top:5px'>${input.name} cannot be empty</p></div>`
 			);
 		}
 	});
