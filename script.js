@@ -1,8 +1,17 @@
 'use strict';
-// const inputFileds = document.querySelectorAll('input');
+const inputFileds = document.querySelectorAll('input');
+const box = document.querySelectorAll('.box');
 
-// document.querySelector('.submit').addEventListener('click', function (e) {
-// 	console.log('clicked');
-// 	console.log(inputFileds.forEach(input => input.getAttribute('type')));
-// 	// input.style.border = '1px solid red';
-// });
+document.querySelector('.submit').addEventListener('click', function (e) {
+	console.log('clicked');
+	inputFileds.forEach(input => {
+		if (input.value.trim() === '') {
+			input.style.border = '1px solid red';
+			console.log('EMPTY');
+			input.insertAdjacentHTML(
+				'afterend',
+				`<p style='color:red;text-align:right;'>${input.name} is required</p>`
+			);
+		}
+	});
+});
