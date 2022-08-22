@@ -4,7 +4,6 @@ const box = document.querySelectorAll('.box');
 // const errorImg = document.querySelectorAll('.errorImg');
 
 document.querySelector('.submit').addEventListener('click', function (e) {
-	e.preventDefault();
 	console.log('clicked');
 	inputFileds.forEach(input => {
 		if (input.value.trim() === '') {
@@ -20,7 +19,7 @@ document.querySelector('.submit').addEventListener('click', function (e) {
          />
             <p style='color:red;text-align:right; margin-top:5px'>${input.name} cannot be empty</p></div>`
 			);
-		}
+		} // else if (input.value !== '') input.nextSibling.remove();
 	});
 });
 
