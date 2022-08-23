@@ -133,7 +133,7 @@ form p {
 	}
 	.container {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		align-items: center;
 	}
 	.text {
