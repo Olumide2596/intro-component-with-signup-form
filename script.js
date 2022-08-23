@@ -1,7 +1,6 @@
 'use strict';
 const inputFileds = document.querySelectorAll('input');
 const box = document.querySelectorAll('.box');
-// const errorImg = document.querySelectorAll('.errorImg');
 
 document.querySelector('.submit').addEventListener('click', function (e) {
 	console.log('clicked');
@@ -9,7 +8,7 @@ document.querySelector('.submit').addEventListener('click', function (e) {
 		if (input.value.trim() === '') {
 			input.style.border = '2px solid red';
 			input.nextSibling.remove();
-			// input.parentElement.removeChild('p');
+
 			input.insertAdjacentHTML(
 				'afterend', //ADD THE IMG ELEMENT TOO
 				`<div class="errorMsg"><img
