@@ -49,14 +49,16 @@ h1 {
 	margin-bottom: 20px;
 	color: #fff;
 	text-align: center;
-}
-.offer {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 	padding-inline: 40px;
+	cursor: pointer;
 }
+
 form {
 	background-color: #fff;
 	padding: 25px;
 	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 input {
 	width: 100%;
@@ -99,6 +101,11 @@ input::placeholder {
 	border: 0px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+.submit:hover {
+	cursor: pointer;
+	background-color: hsl(154, 59%, 60%);
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 form p {
 	font-size: 12px;
