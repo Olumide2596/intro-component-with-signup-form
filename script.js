@@ -12,14 +12,18 @@ document.querySelector('.submit').addEventListener('click', function (e) {
 			// input.parentElement.removeChild('p');
 			input.insertAdjacentHTML(
 				'afterend', //ADD THE IMG ELEMENT TOO
-				`<div><img
+				`<div class="errorMsg"><img
             src="images/icon-error.svg"
             class="errorImg"
             alt=""
          />
             <p style='color:red;text-align:right; margin-top:5px'>${input.name} cannot be empty</p></div>`
 			);
-		} // else if (input.value !== '') input.nextSibling.remove();
+		} else {
+			input.style.border = '1px solid var(--GrayishBlue)';
+			input.nextSibling.textContent = '';
+		}
+		//
 	});
 });
 
