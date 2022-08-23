@@ -6,7 +6,7 @@ document.querySelector('.submit').addEventListener('click', function (e) {
 	console.log('clicked');
 	inputFileds.forEach(input => {
 		if (input.value.trim() === '') {
-			input.style.border = '2px solid red';
+			input.style.border = '1px solid red';
 			input.nextSibling.remove();
 
 			input.insertAdjacentHTML(
