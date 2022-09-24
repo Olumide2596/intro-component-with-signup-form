@@ -2,6 +2,14 @@
 const inputFileds = document.querySelectorAll('input');
 const box = document.querySelectorAll('.box');
 
+inputFileds.forEach(input =>
+	input.addEventListener('oninput', function (e) {
+		e.preventDefault;
+		input.style.border = '1px solid var(--GrayishBlue)';
+		input.nextSibling.textContent = '';
+	})
+);
+
 document.querySelector('.submit').addEventListener('click', function (e) {
 	console.log('clicked');
 	inputFileds.forEach(input => {
@@ -18,12 +26,10 @@ document.querySelector('.submit').addEventListener('click', function (e) {
          />
             <p style='color:red;text-align:right; margin-top:5px'>${input.name} cannot be empty</p></div>`
 			);
-		} else {
-			input.style.border = '1px solid var(--GrayishBlue)';
-			input.nextSibling.textContent = '';
-		}
-		//
+		} // else {
+		// 	input.style.border = '1px solid var(--GrayishBlue)';
+		// 	input.nextSibling.textContent = '';
+		// }
+		// //
 	});
 });
-
-console.log(box);
